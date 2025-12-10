@@ -1,0 +1,97 @@
+Eu sou Danilo Sena, criador do podcast 'Vozes da Amazônia', disponível no Spotify (https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC) e no Instagram (https://www.instagram.com/vozesdamazonia/). O podcast tem como missão transcrever conhecimento acadêmico em uma linguagem acessível, com foco na democratização do conhecimento e no letramento digital, abordando temas ambientais e culturais da Amazônia. Ele é sério, informativo e voltado para a sociedade fora da academia (18-50 anos), com interesse em meio ambiente, ciência e cultura. Na 1ª temporada, os episódios tinham 20 minutos, com introdução a um tema ambiental e entrevista com especialistas (ex.: professores, pós-graduandos). Na 2ª temporada, os episódios são mais curtos (8 minutos), sem entrevistados, com foco em informação ambiental para avaliar o podcast como ferramenta educomunicacional.
+Quero criar um site profissional, funcional e gratuito para o podcast, usando a paleta de cores e imagens do Instagram, com as seguintes características:
+Estrutura do Site:
+Página Inicial:
+Destaque a importância de ferramentas audiovisuais para a democratização do conhecimento e letramento digital (ex.: frase de impacto como 'Levando a ciência da Amazônia para todos').
+
+Inclua um player embutido para ouvir episódios recentes.
+
+Mostre o logo do podcast e links para Spotify e Instagram.
+Página de Episódios:
+Liste todos os episódios com:
+Resumo: 100-150 palavras, com título em negrito, uma frase de impacto, 3-4 bullet points com destaques e um botão 'Ouça no Spotify'. Use um layout de 'card' com fundo claro e uma imagem do Instagram ou relacionada ao tema.
+
+Transcrição: Espaço reservado para transcrições (não disponíveis agora). Crie um modelo de página com formatação clara (ex.: divisões por seções ou falas) para eu adicionar manualmente depois. Se possível, sugira como gerar transcrições automáticas a partir dos áudios.
+
+Bio dos convidados (1ª temporada): Nome, ocupação, 2-3 frases sobre sua trajetória e uma foto (se disponível).
+
+Referências: Seção vazia chamada 'Referências' com um modelo de lista (ex.: 'Livros: [adicionar], Links: [adicionar]') para eu preencher.
+Página Sobre:
+Apresente minha bio (Danilo Sena, criador do podcast), a missão de democratizar conhecimento e o impacto do podcast como ferramenta educomunicacional.
+
+Inclua a paleta de cores e imagens do Instagram.
+Página de Contato:
+Formulário simples para mensagens.
+
+Links para Spotify, Instagram e outras redes sociais.
+Seção de Eventos (opcional):
+Espaço para promover webinars trimestrais com especialistas, com formulário de inscrição (ex.: via Google Forms ou Eventbrite).
+Design e Estilo:
+Use a paleta de cores do Instagram (tons de verde, marrom, azul) e imagens disponíveis no perfil.
+
+Design limpo, moderno e intuitivo, inspirado no site https://naoinviabilize.com.br/, mas com elementos visuais da Amazônia (ex.: fotos reais ou ilustrações).
+
+Responsivo para desktops, tablets e smartphones.
+
+Fontes legíveis (ex.: Roboto, Montserrat) e botões coloridos (ex.: verde vibrante para 'Ouça agora').
+
+Suporte a português (principal), com tradução para inglês e espanhol (via plugin como Polylang ou WPML).
+Funcionalidades Técnicas:
+Desenvolva o site no WordPress (gratuito, com tema e plugins grátis, ex.: Seriously Simple Podcasting para episódios, Yoast para SEO).
+
+Forneça um protótipo em HTML como backup ou para edição futura.
+
+Integrações:
+Feed RSS do Spotify para importar episódios automaticamente.
+
+Links para Spotify e Instagram.
+
+Google Analytics (grátis) para rastrear visitas.
+
+Newsletter (ex.: via Mailchimp gratuito).
+Interatividade:
+Comentários nos episódios.
+
+Enquetes sobre temas futuros.
+Usabilidade:
+Navegação intuitiva, tempo de carregamento rápido.
+
+Acessibilidade (ex.: suporte a leitores de tela, alto contraste).
+SEO: Otimizado para motores de busca (ex.: palavras-chave como 'podcast Amazônia', 'conhecimento ambiental').
+
+Domínio: Verifique a disponibilidade de 'vozesdamazonia.com' e sugira como registrar (ex.: via Namecheap).
+Futuro:
+Reserve espaço para vendas (ex.: página 'Loja' para merchandising ou conteúdo premium).
+
+Estruture o site para suportar webinars trimestrais (ex.: seção 'Eventos').
+
+Automatize a adição de novos episódios via RSS.
+Entregáveis:
+Site funcional no WordPress, com todas as páginas configuradas (inicial, episódios, sobre, contato).
+
+Wireframe ou mockup visual do site.
+
+Prototipo em HTML como backup.
+
+Guia passo a passo para gerenciar o site (ex.: como adicionar episódios, atualizar páginas).
+
+Plano de manutenção simples que eu possa executar sem conhecimento técnico, incluindo:
+Atualização de episódios via plugin.
+
+Backup mensal (ex.: via plugin UpdraftPlus).
+
+Verificação de segurança (ex.: plugin Wordfence gratuito).
+
+Sugestão de como contratar um gestor no futuro.
+Cronograma para desenvolver o site em 4 meses.
+Restrições:
+Use apenas ferramentas gratuitas (ex.: WordPress.com, temas e plugins grátis).
+
+Não posso pagar por gestão agora, mas planejo contratar alguém no futuro.
+Inspirações:
+Site do podcast Não Inviabilize para estrutura e funcionalidade.
+
+Identidade visual do Instagram (@vozesdamazonia
+) para cores e imagens.
+Por favor, entregue um site completamente desenvolvido, com todas as funcionalidades descritas, pronto para uso em 4 meses. Inclua um plano detalhado de como implementar cada seção, ferramentas recomendadas e um guia de manutenção. Se precisar de mais informações, posso fornecer os arquivos de áudio dos episódios ou detalhes adicionais."
+

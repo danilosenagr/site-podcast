@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Vozes da Amazônia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/vozes-logo.jpg" alt="Logo Vozes da Amazônia">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="episodios.html">Episódios</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Entre em Contato</h1>
+            <p>Envie sua mensagem, sugestão ou proposta de parceria</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <h2>Formulário de Contato</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Selecione um assunto</option>
+                                <option value="sugestao">Sugestão de Tema</option>
+                                <option value="feedback">Feedback sobre Episódio</option>
+                                <option value="parceria">Proposta de Parceria</option>
+                                <option value="entrevista">Quero ser Entrevistado</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-container">
+                    <h2>Informações de Contato</h2>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>E-mail</h3>
+                                <p>vozesdamazonia@email.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Universidade</h3>
+                                <p>Universidade Federal do Pará</p>
+                                <p>Curso de Oceanografia</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-podcast"></i>
+                            <div>
+                                <h3>Plataformas</h3>
+                                <p>Disponível no Spotify e outras plataformas de podcast</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media-links">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-icons">
+                            <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" target="_blank" class="social-icon spotify">
+                                <i class="fab fa-spotify"></i>
+                            </a>
+                            <a href="https://www.instagram.com/vozesdamazonia/" target="_blank" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="suggestion-section">
+        <div class="container">
+            <h2>Sugestões de Temas</h2>
+            <p>Tem alguma sugestão de tema para um próximo episódio? Compartilhe conosco!</p>
+            
+            <form class="suggestion-form">
+                <div class="form-group">
+                    <label for="theme">Tema Sugerido</label>
+                    <input type="text" id="theme" name="theme" placeholder="Sua sugestão de tema" required>
+                </div>
+                <div class="form-group">
+                    <label for="importance">Por que este tema é importante?</label>
+                    <textarea id="importance" name="importance" rows="4" placeholder="Explique por que este tema é relevante para a Amazônia" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="references">Referências (opcional)</label>
+                    <textarea id="references" name="references" rows="3" placeholder="Indique artigos, livros ou outras fontes sobre o tema"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Sugestão</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="academic-contact">
+        <div class="container">
+            <h2>Colaboração Acadêmica</h2>
+            <p>Interessado em utilizar o podcast como ferramenta educacional ou em colaborar em pesquisas acadêmicas?</p>
+            
+            <div class="academic-options">
+                <div class="academic-option">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Uso Educacional</h3>
+                    <p>Professores e educadores podem solicitar materiais complementares para uso em sala de aula.</p>
+                    <a href="#" class="btn btn-secondary">Solicitar Material</a>
+                </div>
+                
+                <div class="academic-option">
+                    <i class="fas fa-flask"></i>
+                    <h3>Pesquisa Científica</h3>
+                    <p>Pesquisadores interessados em colaborar ou utilizar o podcast em estudos acadêmicos.</p>
+                    <a href="#" class="btn btn-secondary">Propor Colaboração</a>
+                </div>
+                
+                <div class="academic-option">
+                    <i class="fas fa-users"></i>
+                    <h3>Divulgação Científica</h3>
+                    <p>Cientistas que desejam divulgar suas pesquisas em linguagem acessível.</p>
+                    <a href="#" class="btn btn-secondary">Compartilhar Pesquisa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como posso participar do podcast como entrevistado?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para participar como entrevistado, preencha o formulário de contato selecionando a opção "Quero ser Entrevistado" no campo de assunto. Nossa equipe analisará sua proposta e entrará em contato caso haja compatibilidade com os temas abordados no podcast.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O podcast aceita patrocínios ou parcerias?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, estamos abertos a patrocínios e parcerias que estejam alinhados com nossa missão de educação ambiental e divulgação científica. Entre em contato através do formulário selecionando "Proposta de Parceria" para discutirmos as possibilidades.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso utilizar o conteúdo do podcast em sala de aula?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Incentivamos o uso do podcast como ferramenta educacional. Professores e educadores podem solicitar materiais complementares através da seção "Colaboração Acadêmica" desta página.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quando será lançada a terceira temporada?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A terceira temporada "Vozes da Amazônia: Ciência e Saberes em Diálogo" está em fase de desenvolvimento. Para receber notificações sobre o lançamento, inscreva-se em nossa newsletter na página inicial ou siga-nos nas redes sociais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vozes da Amazônia</h3>
+                    <p>Podcast de Educação Ambiental</p>
+                    <p>Divulgação científica da Oceanografia na Amazônia</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="episodios.html">Episódios</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" target="_blank"><i class="fab fa-spotify"></i></a>
+                        <a href="https://www.instagram.com/vozesdamazonia/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vozes da Amazônia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

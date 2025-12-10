@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conheça os Entrevistados | Vozes da Amazônia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .interviewee-card {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .interviewee-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .interviewee-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .interviewee-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .interviewee-card:hover .interviewee-image img {
+            transform: scale(1.05);
+        }
+        
+        .interviewee-content {
+            padding: 20px;
+        }
+        
+        .interviewee-content h3 {
+            color: #2A5E41;
+            margin-top: 0;
+            font-size: 22px;
+        }
+        
+        .interviewee-role {
+            color: #F7A239;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .interviewee-episodes {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        
+        .interviewee-episodes h4 {
+            color: #6D4534;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .interviewee-episodes ul {
+            padding-left: 20px;
+        }
+        
+        .interviewee-episodes li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .interviewees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2A5E41;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #F7A239;
+            transform: translateY(-3px);
+        }
+        
+        .social-links i {
+            font-size: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .interviewees-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/vozes-logo.jpg" alt="Logo Vozes da Amazônia">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="episodios.html">Episódios</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="entrevistados.html" class="active">Entrevistados</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Conheça os Entrevistados</h1>
+            <p>Especialistas e pesquisadores que compartilham seus conhecimentos sobre a Amazônia</p>
+        </div>
+    </section>
+
+    <section class="interviewees-section">
+        <div class="container">
+            <h2>Nossos Entrevistados</h2>
+            <p class="section-intro">O podcast "Vozes da Amazônia" tem o privilégio de contar com a participação de especialistas renomados em diversas áreas relacionadas à Amazônia. Conheça um pouco mais sobre esses profissionais que compartilham seus conhecimentos e experiências em nossos episódios.</p>
+            
+            <div class="interviewees-grid">
+                <div class="interviewee-card">
+                    <div class="interviewee-image">
+                        <img src="images/team/micaela.jpg" alt="Micaela Valentim">
+                    </div>
+                    <div class="interviewee-content">
+                        <h3>Micaela Valentim</h3>
+                        <p class="interviewee-role">Oceanógrafa e Especialista em Gestão de Cidades e Sustentabilidade</p>
+                        <p>Gerente de Projetos, facilitadora de Vivências e formada em Negócios de Impacto Socioambientais. Fellow da Rede Social Good Brasil e Diretora Presidente da Ame o Tucunduba.</p>
+                        <div class="interviewee-episodes">
+                            <h4>Participação em Episódios:</h4>
+                            <ul>
+                                <li>Gestão Sustentável de Cidades Amazônicas</li>
+                                <li>Projetos Socioambientais na Amazônia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interviewee-card">
+                    <div class="interviewee-image">
+                        <img src="images/team/gabriel.jpg" alt="Gabriel Pompeu">
+                    </div>
+                    <div class="interviewee-content">
+                        <h3>Gabriel Pompeu</h3>
+                        <p class="interviewee-role">Engenheiro Ambiental e Mestrando em Oceanografia</p>
+                        <p>Integrante do grupo de Monitoramento Ambiental e Marinho. Atualmente desenvolve sua dissertação sobre os resíduos sólidos em rios e canais de drenagem em Belém.</p>
+                        <div class="interviewee-episodes">
+                            <h4>Participação em Episódios:</h4>
+                            <ul>
+                                <li>Resíduos Sólidos nos Rios Urbanos</li>
+                                <li>Desafios da Drenagem Urbana em Belém</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interviewee-card">
+                    <div class="interviewee-image">
+                        <img src="images/team/sury.jpg" alt="Sury Monteiro">
+                    </div>
+                    <div class="interviewee-content">
+                        <h3>Sury Monteiro</h3>
+                        <p class="interviewee-role">Oceanógrafa, Professora e Pesquisadora</p>
+                        <p>Atua em projetos socioambientais e facilita a formação de cidadãos cientistas sensibilizados em monitorar nossos rios e oceano. Está engajada na preservação do complexo sistema fluvial e marinho Paraense.</p>
+                        <div class="interviewee-episodes">
+                            <h4>Participação em Episódios:</h4>
+                            <ul>
+                                <li>Ciência Cidadã na Preservação dos Rios</li>
+                                <li>Educação Ambiental na Amazônia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interviewee-card">
+                    <div class="interviewee-image">
+                        <img src="images/team/raqueline.jpg" alt="Raqueline Monteiro">
+                    </div>
+                    <div class="interviewee-content">
+                        <h3>Raqueline Monteiro</h3>
+                        <p class="interviewee-role">Oceanógrafa e Doutoranda em Ecologia Aquática e Pesca</p>
+                        <p>Integrante do grupo de Estudo de Microplástico na Amazônia (GEMA) e Jovem Embaixadora do Oceano Atlântico. Estuda sobre a poluição por lixo marinho e plástico em ambientes costeiros e oceânicos.</p>
+                        <div class="interviewee-episodes">
+                            <h4>Participação em Episódios:</h4>
+                            <ul>
+                                <li>Microplásticos na Amazônia</li>
+                                <li>Poluição Marinha na Costa Amazônica</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interviewee-card">
+                    <div class="interviewee-image">
+                        <img src="images/team/matheus.jpg" alt="Matheus Santos">
+                    </div>
+                    <div class="interviewee-content">
+                        <h3>Matheus Santos</h3>
+                        <p class="interviewee-role">Graduando em Oceanografia e Ilustrador Digital</p>
+                        <p>Ilustrador digital no @spacemartt, possui experiências em educação ambiental e atualmente trabalha com velocidade de corrente na costa Amazônica.</p>
+                        <div class="interviewee-episodes">
+                            <h4>Participação em Episódios:</h4>
+                            <ul>
+                                <li>Arte e Ciência na Educação Ambiental</li>
+                                <li>Correntes Marinhas na Costa Amazônica</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interviewee-card">
+                    <div class="interviewee-image">
+                        <img src="images/team/mascus.jpg" alt="Marcus">
+                    </div>
+                    <div class="interviewee-content">
+                        <h3>Marcus</h3>
+                        <p class="interviewee-role">Oceanógrafo e Pesquisador</p>
+                        <p>Integrante do Grupo de pesquisa em Monitoramento Ambiental Marinho. Desenvolve pesquisas geoquímicas sobre a especiação do fósforo em rios urbanos da cidade de Belém, utilizando metodologias de coleta e análise inéditas na região.</p>
+                        <div class="interviewee-episodes">
+                            <h4>Participação em Episódios:</h4>
+                            <ul>
+                                <li>Geoquímica dos Rios Urbanos</li>
+                                <li>Inovações Metodológicas na Pesquisa Amazônica</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Nossa Equipe</h2>
+            <p class="section-intro">Conheça os profissionais por trás do podcast "Vozes da Amazônia", dedicados a trazer informações de qualidade sobre a Amazônia.</p>
+            
+            <div class="interviewees-grid">
+                <div class="interviewee-card">
+                    <div class="interviewee-image">
+                        <img src="images/team/deise.jpg" alt="Deise">
+                    </div>
+                    <div class="interviewee-content">
+                        <h3>Deise</h3>
+                        <p class="interviewee-role">Produtora e Apresentadora</p>
+                        <p>Oceanógrafa com especialização em comunicação científica, Deise é responsável pela produção e apresentação do podcast, trazendo sua experiência para tornar os temas científicos acessíveis ao público.</p>
+                    </div>
+                </div>
+
+                <div class="interviewee-card">
+                    <div class="interviewee-image">
+                        <img src="images/team/isabella.jpg" alt="Isabella">
+                    </div>
+                    <div class="interviewee-content">
+                        <h3>Isabella</h3>
+                        <p class="interviewee-role">Pesquisadora e Co-apresentadora</p>
+                        <p>Formada em Oceanografia, Isabella contribui com sua expertise em pesquisa para garantir a qualidade e precisão das informações apresentadas no podcast.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Quer participar do podcast?</h2>
+            <p>Se você é pesquisador, especialista ou tem experiência relevante sobre temas ambientais da Amazônia, entre em contato conosco para participar de um episódio.</p>
+            <div class="cta-buttons">
+                <a href="contato.html" class="btn btn-primary">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sobre Nós</h3>
+                    <p>O podcast "Vozes da Amazônia" é um projeto criado por oceanógrafos da Universidade Federal do Pará, com o objetivo de democratizar o conhecimento ambiental.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="episodios.html">Episódios</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="entrevistados.html">Entrevistados</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>Email: vozesdamazonia@gmail.com</li>
+                        <li>Instagram: @vozesdamazonia</li>
+                        <li>Spotify: Vozes da Amazônia</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" title="Spotify"><img src="images/icons/spotify.svg" alt="Spotify" width="24" height="24"></a>
+                        <a href="https://www.instagram.com/vozesdamazonia/" title="Instagram"><img src="images/icons/instagram.svg" alt="Instagram" width="24" height="24"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vozes da Amazônia - Divulgação científica ambiental na Amazônia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-menu">
+        <div class="close-menu">&times;</div>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="episodios.html">Episódios</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="entrevistados.html">Entrevistados</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" title="Spotify"><img src="images/icons/spotify.svg" alt="Spotify" width="24" height="24"></a>
+            <a href="https://www.instagram.com/vozesdamazonia/" title="Instagram"><img src="images/icons/instagram.svg" alt="Instagram" width="24" height="24"></a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
