@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vozes da Amazônia | Podcast de Educação Ambiental</title>
+    <!-- Base stylesheet from the original site -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Custom overrides for the new visual identity -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Font imports -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Header -->
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -31,6 +37,16 @@
         </div>
     </header>
 
+    <!-- Seção "Ouça o podcast" -->
+    <section class="listen-podcast-section" aria-labelledby="ouca-podcast-titulo">
+        <div class="container">
+            <h2 id="ouca-podcast-titulo">Ouça o podcast</h2>
+            <p>Descubra histórias, pesquisas e vivências que conectam ciência, Amazônia e o seu dia a dia.</p>
+            <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" class="btn btn-spotify">Ouvir agora no Spotify</a>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
@@ -44,6 +60,14 @@
         </div>
     </section>
 
+    <!-- Divisor em forma de rio -->
+    <div class="divisor-rio" aria-hidden="true">
+        <svg class="divisor-rio-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C150,10 350,70 600,40 C850,10 1050,70 1200,40 L1200,120 L0,120 Z" class="rio-path"></path>
+        </svg>
+    </div>
+
+    <!-- Featured Episode Section -->
     <section class="featured-episode">
         <div class="container">
             <h2>Ouça o Episódio Mais Recente</h2>
@@ -53,6 +77,7 @@
         </div>
     </section>
 
+    <!-- Metrics Section -->
     <section class="metrics-section">
         <div class="container">
             <div class="metrics-container">
@@ -72,6 +97,7 @@
         </div>
     </section>
 
+    <!-- Recent Episodes Section -->
     <section class="recent-episodes">
         <div class="container">
             <h2>Episódios Recentes</h2>
@@ -134,6 +160,7 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <h2>Acompanhe o Vozes da Amazônia</h2>
@@ -145,6 +172,7 @@
         </div>
     </section>
 
+    <!-- Newsletter Section -->
     <section class="newsletter-section">
         <div class="container">
             <h2>Receba Novidades</h2>
@@ -156,6 +184,32 @@
         </div>
     </section>
 
+    <!-- Divisor em forma de raiz antes do rodapé -->
+    <div class="divisor-raiz" aria-hidden="true">
+        <svg class="divisor-raiz-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <!-- "terra" em cima + raízes descendo -->
+            <path class="raiz-terra"
+                  d="M0,0 L1200,0 L1200,40 
+                     C1100,35 1050,60 990,70 
+                     C930,80 880,60 820,70 
+                     C760,80 720,55 660,60 
+                     C600,65 560,45 500,50 
+                     C440,55 400,35 340,40 
+                     C280,45 240,30 180,35 
+                     C120,40 80,25 0,30 Z" />
+            <!-- alguns galhos/raízes pendendo -->
+            <path class="raiz-galhos"
+                  d="M80,40 C70,65 75,90 70,120
+                     M250,40 C240,70 245,95 240,120
+                     M420,40 C410,75 415,100 410,120
+                     M600,40 C590,70 595,100 590,120
+                     M780,40 C770,75 775,105 770,120
+                     M950,40 C940,70 945,95 940,120
+                     M1120,40 C1110,75 1115,105 1110,120" />
+        </svg>
+    </div>
+
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
@@ -195,6 +249,7 @@
         </div>
     </footer>
 
+    <!-- Mobile Menu -->
     <div class="mobile-menu">
         <div class="close-menu">&times;</div>
         <ul>
@@ -211,8 +266,7 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>
-
-<!-- rebuild github pages -->
