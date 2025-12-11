@@ -4,21 +4,295 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vozes da Amazônia | Podcast de Educação Ambiental</title>
-    <!-- Base stylesheet from the original site -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Custom overrides for the new visual identity -->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Font imports -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Overrides da nova identidade + raízes -->
+    <style>
+        :root {
+            --cor-creme: #F4EFD2;
+            --cor-fundo: #F3F5F4;
+            --cor-verde: #6b9b3a;
+            --cor-verde-escuro: #2f5a2f;
+            --cor-marrom: #4b2614;
+            --cor-marrom-escuro: #2a140a;
+            --cor-raiz: #9E6B4B;
+            --cor-raiz-escura: #4b2614;
+            --cor-terracota: #E65A44;
+            --cor-clara: #FDF7E9;
+        }
+
+        body {
+            background-color: var(--cor-creme);
+            color: var(--cor-marrom);
+        }
+
+        .main-header {
+            background-color: var(--cor-creme);
+            border-bottom: 2px solid rgba(75, 38, 20, 0.08);
+        }
+
+        .main-header .main-nav a {
+            color: var(--cor-marrom);
+            font-weight: 500;
+        }
+
+        .main-header .main-nav a.active {
+            color: var(--cor-terracota);
+        }
+
+        .logo img {
+            max-height: 72px;
+            width: auto;
+        }
+
+        .hero-section {
+            background: linear-gradient(180deg, var(--cor-verde-escuro) 0%, #234325 100%);
+            color: #ffffff;
+            padding: 4rem 0 3rem;
+        }
+
+        .hero-section .hero-title.main-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: 0.03em;
+        }
+
+        .hero-section p {
+            color: #fdf7e4;
+        }
+
+        .hero-buttons .btn-accent {
+            background-color: var(--cor-terracota);
+            border-color: var(--cor-terracota);
+            color: #ffffff;
+        }
+
+        .hero-buttons .btn-accent:hover {
+            background-color: #c64832;
+            border-color: #c64832;
+        }
+
+        .btn-spotify {
+            background-color: var(--cor-verde-escuro);
+            border-color: var(--cor-verde-escuro);
+            color: #ffffff;
+        }
+
+        .btn-spotify:hover {
+            background-color: #214523;
+            border-color: #214523;
+        }
+
+        .btn-primary {
+            background-color: var(--cor-verde);
+            border-color: var(--cor-verde);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--cor-verde-escuro);
+            border-color: var(--cor-verde-escuro);
+        }
+
+        .btn-instagram {
+            background-color: var(--cor-terracota);
+            border-color: var(--cor-terracota);
+            color: #ffffff;
+        }
+
+        .btn-instagram:hover {
+            background-color: #bf432f;
+            border-color: #bf432f;
+        }
+
+        .featured-episode,
+        .metrics-section,
+        .recent-episodes,
+        .cta-section,
+        .newsletter-section {
+            background-color: var(--cor-creme);
+        }
+
+        .metrics-section .metric-number {
+            color: var(--cor-verde-escuro);
+        }
+
+        .metrics-section .metric-label {
+            color: var(--cor-marrom);
+        }
+
+        .episode-card {
+            background-color: #fffaf0;
+            border: 1px solid rgba(75, 38, 20, 0.12);
+        }
+
+        .episode-card h3 {
+            color: var(--cor-verde-escuro);
+        }
+
+        .episode-tagline {
+            color: var(--cor-terracota);
+            font-weight: 600;
+        }
+
+        .cta-section h2,
+        .recent-episodes h2,
+        .newsletter-section h2,
+        .featured-episode h2 {
+            color: var(--cor-marrom);
+        }
+
+        /* ===== Divisor em forma de rio (opcional entre hero e conteúdo) ===== */
+        .divisor-rio {
+            width: 100%;
+            height: 90px;
+            overflow: hidden;
+            line-height: 0;
+            background-color: var(--cor-creme);
+        }
+
+        .divisor-rio-svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .rio-path {
+            fill: var(--cor-verde);
+        }
+
+        /* ===== Rodapé com faixa marrom e raízes ===== */
+
+        /* Seção que contém o SVG das raízes */
+        .divisor-raiz {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+            background-color: #F3F5F4; /* fundo neutro atrás da "terra" */
+        }
+
+        .divisor-raiz-svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Parte de "terra" (topo marrom mais claro, tom Amazônia) */
+        .raiz-terra {
+            fill: #9E6B4B; /* tom terroso, parecido com o “AMAZÔNIA” da logo */
+        }
+
+        /* Galhos / raízes descendo */
+        .raiz-galhos {
+            fill: none;
+            stroke: #4b2614;      /* marrom mais escuro para contraste */
+            stroke-width: 4;
+            stroke-linecap: round;
+        }
+
+        /* Minimalista (entre seções) */
+        .divisor-raiz.minimal {
+            height: 70px;
+        }
+
+        /* Fundo geral do rodapé em marrom mais escuro */
+        .main-footer {
+            background: #0B3D2E; /* fallback se algo quebrar */
+            background: linear-gradient(to bottom, #4b2614 0%, #2a140a 100%);
+            color: #FDF7E9;
+            padding: 60px 0 30px;
+            font-size: 0.95rem;
+        }
+
+        /* Conteúdo interno do rodapé (mantém organização existente) */
+        .main-footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .main-footer .footer-column {
+            flex: 1 1 180px;
+            min-width: 180px;
+        }
+
+        /* Títulos no rodapé */
+        .main-footer h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #FFE7C2; /* um pouco mais claro para destacar no fundo marrom */
+        }
+
+        /* Textos e links */
+        .main-footer p,
+        .main-footer li {
+            color: #FDF7E9;
+            line-height: 1.6;
+        }
+
+        .main-footer a {
+            color: #FFE7C2;
+            text-decoration: none;
+        }
+
+        .main-footer a:hover,
+        .main-footer a:focus {
+            text-decoration: underline;
+        }
+
+        /* Linha final de direitos autorais */
+        .footer-bottom {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(253, 247, 233, 0.3);
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Ícones sociais no rodapé mantêm boa visibilidade */
+        .main-footer .social-links img {
+            filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
+        }
+
+        /* Ajustes responsivos simples */
+        @media (max-width: 768px) {
+            .main-footer {
+                padding: 40px 0 20px;
+            }
+
+            .main-footer .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Menu mobile com cores novas */
+        .mobile-menu {
+            background-color: #4b2614;
+            color: #FDF7E9;
+        }
+
+        .mobile-menu a {
+            color: #FDF7E9;
+        }
+
+        .mobile-menu a:hover {
+            color: #FFE7C2;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/vozes-logo.jpg" alt="Logo Vozes da Amazônia">
+                <!-- Salve a nova logo como vozes-logo-nova.png na pasta images -->
+                <img src="images/vozes-logo-nova.png" alt="Logo Vozes da Amazônia">
             </a>
             <nav class="main-nav">
                 <ul>
@@ -37,37 +311,30 @@
         </div>
     </header>
 
-    <!-- Seção "Ouça o podcast" -->
-    <section class="listen-podcast-section" aria-labelledby="ouca-podcast-titulo">
-        <div class="container">
-            <h2 id="ouca-podcast-titulo">Ouça o podcast</h2>
-            <p>Descubra histórias, pesquisas e vivências que conectam ciência, Amazônia e o seu dia a dia.</p>
-            <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" class="btn btn-spotify">Ouvir agora no Spotify</a>
-        </div>
-    </section>
+    <!-- ATENÇÃO: seção "Ouça o podcast" do topo foi removida -->
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1>Levando a ciência da Amazônia para todos</h1>
+                <h1 class="hero-title main-title">
+                    Levando a ciência da Amazônia para todos
+                </h1>
                 <p>Democratizando o conhecimento ambiental através de exemplos do cotidiano</p>
                 <div class="hero-buttons">
                     <a href="episodios.html" class="btn btn-accent">Ouça os Episódios</a>
-                    <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" class="btn btn-spotify">Siga no Spotify</a>
+                    <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC?si=c60397341cac4d34" class="btn btn-spotify">Siga no Spotify</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Divisor em forma de rio -->
+    <!-- Divisor em forma de rio após o hero -->
     <div class="divisor-rio" aria-hidden="true">
         <svg class="divisor-rio-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,40 C150,10 350,70 600,40 C850,10 1050,70 1200,40 L1200,120 L0,120 Z" class="rio-path"></path>
         </svg>
     </div>
 
-    <!-- Featured Episode Section -->
     <section class="featured-episode">
         <div class="container">
             <h2>Ouça o Episódio Mais Recente</h2>
@@ -77,7 +344,6 @@
         </div>
     </section>
 
-    <!-- Metrics Section -->
     <section class="metrics-section">
         <div class="container">
             <div class="metrics-container">
@@ -97,7 +363,6 @@
         </div>
     </section>
 
-    <!-- Recent Episodes Section -->
     <section class="recent-episodes">
         <div class="container">
             <h2>Episódios Recentes</h2>
@@ -116,7 +381,7 @@
                                 <li>Desafios para a Amazônia</li>
                             </ul>
                         </div>
-                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" class="btn btn-spotify">Ouça no Spotify</a>
+                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC?si=c60397341cac4d34" class="btn btn-spotify">Ouça no Spotify</a>
                     </div>
                 </div>
                 <div class="episode-card">
@@ -133,7 +398,7 @@
                                 <li>Impacto ambiental das festividades</li>
                             </ul>
                         </div>
-                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" class="btn btn-spotify">Ouça no Spotify</a>
+                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC?si=c60397341cac4d34" class="btn btn-spotify">Ouça no Spotify</a>
                     </div>
                 </div>
                 <div class="episode-card">
@@ -150,7 +415,7 @@
                                 <li>Soluções para redução</li>
                             </ul>
                         </div>
-                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" class="btn btn-spotify">Ouça no Spotify</a>
+                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC?si=c60397341cac4d34" class="btn btn-spotify">Ouça no Spotify</a>
                     </div>
                 </div>
             </div>
@@ -160,34 +425,9 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Acompanhe o Vozes da Amazônia</h2>
-            <p>Fique por dentro de todos os episódios e novidades</p>
-            <div class="cta-buttons">
-                <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" class="btn btn-spotify">Siga no Spotify</a>
-                <a href="https://www.instagram.com/vozesdamazonia/" class="btn btn-instagram">Siga no Instagram</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container">
-            <h2>Receba Novidades</h2>
-            <p>Inscreva-se para receber atualizações sobre novos episódios e eventos</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Seu e-mail" required>
-                <button type="submit" class="btn btn-primary">Inscrever</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Divisor em forma de raiz antes do rodapé -->
-    <div class="divisor-raiz" aria-hidden="true">
+    <!-- Divisor de raízes minimalista entre episódios e CTA -->
+    <div class="divisor-raiz minimal" aria-hidden="true">
         <svg class="divisor-raiz-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <!-- "terra" em cima + raízes descendo -->
             <path class="raiz-terra"
                   d="M0,0 L1200,0 L1200,40 
                      C1100,35 1050,60 990,70 
@@ -197,7 +437,6 @@
                      C440,55 400,35 340,40 
                      C280,45 240,30 180,35 
                      C120,40 80,25 0,30 Z" />
-            <!-- alguns galhos/raízes pendendo -->
             <path class="raiz-galhos"
                   d="M80,40 C70,65 75,90 70,120
                      M250,40 C240,70 245,95 240,120
@@ -209,7 +448,53 @@
         </svg>
     </div>
 
-    <!-- Footer -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Acompanhe o Vozes da Amazônia</h2>
+            <p>Fique por dentro de todos os episódios e novidades</p>
+            <div class="cta-buttons">
+                <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC?si=c60397341cac4d34" class="btn btn-spotify">Siga no Spotify</a>
+                <a href="https://www.instagram.com/vozesdamazonia/" class="btn btn-instagram">Siga no Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Receba Novidades</h2>
+            <p>Inscreva-se para receber atualizações sobre novos episódios e eventos</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Seu e-mail" required>
+                <button type="submit" class="btn btn-primary">Inscrever</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- RAIZ GRANDE ANTES DO RODAPÉ -->
+    <div class="divisor-raiz" aria-hidden="true">
+        <svg class="divisor-raiz-svg" viewBox="0 0 1200 160" preserveAspectRatio="none">
+            <path class="raiz-terra"
+                  d="M0,0 L1200,0 L1200,50
+                     C1150,45 1100,70 1050,80
+                     C1000,90 960,70 910,80
+                     C860,90 820,65 770,70
+                     C720,75 690,55 640,60
+                     C590,65 560,45 510,50
+                     C460,55 430,35 380,40
+                     C330,45 300,30 250,35
+                     C200,40 160,25 0,30 Z" />
+            <path class="raiz-galhos"
+                  d="M60,50 C50,90 55,120 50,160
+                     M200,50 C190,95 195,130 190,160
+                     M360,50 C350,100 355,135 350,160
+                     M520,50 C510,100 515,140 510,160
+                     M680,50 C670,100 675,140 670,160
+                     M840,50 C830,100 835,140 830,160
+                     M1000,50 C990,100 995,140 990,160
+                     M1140,50 C1130,100 1135,140 1130,160" />
+        </svg>
+    </div>
+
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
@@ -238,7 +523,7 @@
                 <div class="footer-column">
                     <h3>Redes Sociais</h3>
                     <div class="social-links">
-                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" title="Spotify"><img src="images/icons/spotify.svg" alt="Spotify" width="24" height="24"></a>
+                        <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC?si=c60397341cac4d34" title="Spotify"><img src="images/icons/spotify.svg" alt="Spotify" width="24" height="24"></a>
                         <a href="https://www.instagram.com/vozesdamazonia/" title="Instagram"><img src="images/icons/instagram.svg" alt="Instagram" width="24" height="24"></a>
                     </div>
                 </div>
@@ -249,7 +534,6 @@
         </div>
     </footer>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu">
         <div class="close-menu">&times;</div>
         <ul>
@@ -261,12 +545,11 @@
             <li><a href="eventos.html">Eventos</a></li>
         </ul>
         <div class="social-links">
-            <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC" title="Spotify"><img src="images/icons/spotify.svg" alt="Spotify" width="24" height="24"></a>
+            <a href="https://open.spotify.com/show/2Y2vYvanpFxCKpyxnQpubC?si=c60397341cac4d34" title="Spotify"><img src="images/icons/spotify.svg" alt="Spotify" width="24" height="24"></a>
             <a href="https://www.instagram.com/vozesdamazonia/" title="Instagram"><img src="images/icons/instagram.svg" alt="Instagram" width="24" height="24"></a>
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>
